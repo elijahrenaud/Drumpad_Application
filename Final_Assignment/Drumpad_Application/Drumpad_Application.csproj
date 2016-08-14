@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="4Button.cs">
+    <Compile Include="FourButton.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="4Button.Designer.cs">
-      <DependentUpon>4Button.cs</DependentUpon>
+    <Compile Include="FourButton.Designer.cs">
+      <DependentUpon>FourButton.cs</DependentUpon>
     </Compile>
     <Compile Include="Test timings.cs">
       <SubType>Form</SubType>
@@ -58,12 +58,11 @@
     <Compile Include="Test timings.Designer.cs">
       <DependentUpon>Test timings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Track.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sounds.cs" />
-    <EmbeddedResource Include="4Button.resx">
-      <DependentUpon>4Button.cs</DependentUpon>
+    <EmbeddedResource Include="FourButton.resx">
+      <DependentUpon>FourButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -73,6 +72,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Test timings.resx">
       <DependentUpon>Test timings.cs</DependentUpon>
@@ -91,7 +91,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="_Samples\" />
+    <None Include="_Samples\Snare1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="_Samples\Kick1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

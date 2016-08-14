@@ -1,6 +1,6 @@
 ﻿namespace Drumpad_Application
 {
-    partial class Form1
+    partial class FourButton
     {
         /// <summary>
         /// Required designer variable.
@@ -47,6 +47,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Pad1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -56,6 +57,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Pad2";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -119,7 +121,7 @@
             this.textBox1.Size = new System.Drawing.Size(436, 74);
             this.textBox1.TabIndex = 8;
             // 
-            // Form1
+            // FourButton
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -133,7 +135,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Name = "FourButton";
             this.Text = "Drumpad 4";
             this.ResumeLayout(false);
             this.PerformLayout();

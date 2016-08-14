@@ -16,7 +16,7 @@ namespace Drumpad_Application
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Test_timings());
+            Application.Run(new FourButton());
         }
     }
 }
