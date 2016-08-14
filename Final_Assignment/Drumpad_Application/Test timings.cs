@@ -24,8 +24,7 @@ namespace Drumpad_Application
 
             stimer.Tick += new EventHandler(nothing);
         }
-
-        private void start_Click(object sender, EventArgs e)
+                private void start_Click(object sender, EventArgs e)
         {
             stimer.Interval = 250;
             stimer.Start();

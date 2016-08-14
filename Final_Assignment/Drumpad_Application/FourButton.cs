@@ -47,22 +47,23 @@ namespace Drumpad_Application
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-
+            foreach (string s in p.song)
+                textBox1.Text += s;
         }
 
         private void btnPause_Click(object sender, EventArgs e)
         {
-
+            p.pause();
         }
 
         private void btnStop_Click(object sender, EventArgs e)
         {
-
+            p.stop();
         }
 
         private void btnRecord_Click(object sender, EventArgs e)
         {
-
+            p.start();
         }
     }
 }
