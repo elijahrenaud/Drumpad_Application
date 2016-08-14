@@ -52,6 +52,7 @@
     <Compile Include="FourButton.Designer.cs">
       <DependentUpon>FourButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="Player.cs" />
     <Compile Include="Test timings.cs">
       <SubType>Form</SubType>
     </Compile>
