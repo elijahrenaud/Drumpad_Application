@@ -14,30 +14,40 @@ namespace Drumpad_Application
     public partial class FourButton : Form
     {
         //Objects
-        Sounds samples;
-        Player p;
-        Timer utimer = new Timer();
+        Sounds samples; // object to hold the sounds
+        Player p; // main player
+        Timer utimer = new Timer(); // updating timer
 
         public FourButton()
         {
             InitializeComponent();
-            samples = new Sounds();
+            //initialize objects
+            samples = new Sounds(); 
             p = new Player();
+            //set the timer effects
             utimer.Interval = 50;
             utimer.Tick += new EventHandler(upd);
             this.Focus();
         }
-
+        /// <summary>
+        /// update textbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void upd(object sender, EventArgs e) {
             textBox1.Text = p.song;
             textBox1.Update();
         }
+        /// <summary>
+        /// a list of functions to record the sound
+        /// </summary>
+        
         private void button1_Click(object sender, EventArgs e)
         {
             p.push(1);
             samples.play(1);
         }
-
+     
         private void button2_Click(object sender, EventArgs e)
         {
             p.push(2);
@@ -56,6 +66,11 @@ namespace Drumpad_Application
             samples.play(4);
         }
 
+        /// <summary>
+        /// play the song that us currently in the player
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnPlay_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
@@ -96,23 +111,33 @@ namespace Drumpad_Application
             p.start();
             utimer.Start();
         }
-
+        //open and save file dialogs
         private void importToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ofdImport.Title = "Open Song File";
             ofdImport.Filter = "txt song files|*.txt";
-            if (ofdImport.ShowDialog() == DialogResult.OK) {
-                string data = File.ReadAllText(ofdImport.FileName);
-                foreach (char c in data) {
-                    if (!(c.Equals('-') || char.IsDigit(c)))
+            try
+            {
+                if (ofdImport.ShowDialog() == DialogResult.OK)
+                {
+                    string data = File.ReadAllText(ofdImport.FileName);
+                    //check if the file is proper file
+                    foreach (char c in data)
                     {
-                        MessageBox.Show("This file is not a song. Please try other file");
-                        return;
+                        if (!(c.Equals('-') || char.IsDigit(c)))
+                        {
+                            MessageBox.Show("This file is not a song. Please try other file");
+                            return;
+                        }
+                        else
+                        {
+                            p = new Player(data);
+                        }
                     }
-                    else {
-                        p = new Player(data);
-                    }
-                } 
+                }
+            }
+            catch {
+                MessageBox.Show("Error during file opening");
             }
         }
 
@@ -120,8 +145,15 @@ namespace Drumpad_Application
         {
             sfdexport.Title = "Save as text file";
             sfdexport.Filter = "txt song files|*.txt";
-            if (sfdexport.ShowDialog() == DialogResult.OK) {
-                File.WriteAllText(sfdexport.FileName, p.song);
+            try
+            {
+                if (sfdexport.ShowDialog() == DialogResult.OK)
+                {
+                    File.WriteAllText(sfdexport.FileName, p.song);
+                }
+            }
+            catch {
+                MessageBox.Show("Error during file closing");
             }
         }
 
@@ -132,7 +164,7 @@ namespace Drumpad_Application
 
         private void form_KeyDown(object sender, KeyEventArgs e)
         {
-          
+          //bind to keyboard
             switch (e.KeyCode)
             {
                 case Keys.Q:
@@ -158,11 +190,14 @@ namespace Drumpad_Application
 
         private void padToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //open other form
             NineButton swap = new NineButton();
             this.Hide();
             swap.Focus();
             swap.Show();
         }
+
+        //help and about box
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
