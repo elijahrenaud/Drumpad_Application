@@ -5,6 +5,7 @@ using System.Linq;
 using System.Media;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Drumpad_Application
 {
@@ -24,42 +25,53 @@ namespace Drumpad_Application
         //Constructor
         public Sounds()
         {
-            //Initialize Sounds
-            Stream sFile1 = Properties.Resources.Kick1;
-            sound1 = new SoundPlayer(sFile1);
-            sound1.Load();
+            try {
+                //Initialize Sounds
+                Stream sFile1 = Properties.Resources.Kick1;
+                sound1 = new SoundPlayer(sFile1);
+                sound1.Load();
 
-            Stream sFile2 = Properties.Resources.Snare1;
-            sound2 = new SoundPlayer(sFile2);
-            sound2.Load();
+                Stream sFile2 = Properties.Resources.Snare1;
+                sound2 = new SoundPlayer(sFile2);
+                sound2.Load();
 
-            Stream sFile3 = Properties.Resources.HiHat1;
-            sound3 = new SoundPlayer(sFile3);
-            sound3.Load();
+                Stream sFile3 = Properties.Resources.HiHat1;
+                sound3 = new SoundPlayer(sFile3);
+                sound3.Load();
 
-            Stream sFile4 = Properties.Resources.Piano1;
-            sound4 = new SoundPlayer(sFile4);
-            sound4.Load();
+                Stream sFile4 = Properties.Resources.Piano1;
+                sound4 = new SoundPlayer(sFile4);
+                sound4.Load();
 
-            Stream sFile5 = Properties.Resources.Laser2;
-            sound5 = new SoundPlayer(sFile5);
-            sound5.Load();
+                Stream sFile5 = Properties.Resources.Laser2;
+                sound5 = new SoundPlayer(sFile5);
+                sound5.Load();
 
-            Stream sFile6 = Properties.Resources.Pop1;
-            sound6 = new SoundPlayer(sFile6);
-            sound6.Load();
+                Stream sFile6 = Properties.Resources.Pop1;
+                sound6 = new SoundPlayer(sFile6);
+                sound6.Load();
 
-            Stream sFile7 = Properties.Resources.DoorBell1;
-            sound7 = new SoundPlayer(sFile7);
-            sound7.Load();
+                Stream sFile7 = Properties.Resources.DoorBell1;
+                sound7 = new SoundPlayer(sFile7);
+                sound7.Load();
 
-            Stream sFile8 = Properties.Resources.Slap1;
-            sound8 = new SoundPlayer(sFile8);
-            sound8.Load();
+                Stream sFile8 = Properties.Resources.Slap1;
+                sound8 = new SoundPlayer(sFile8);
+                sound8.Load();
 
-            Stream sFile9 = Properties.Resources.Robot1;
-            sound9 = new SoundPlayer(sFile9);
-            sound9.Load();
+                Stream sFile9 = Properties.Resources.Robot1;
+                sound9 = new SoundPlayer(sFile9);
+                sound9.Load();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show(
+                    "Sounds did not load Correctly!",
+                    "Oops!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Asterisk   
+                );
+            }
 
         }
 

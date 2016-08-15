@@ -79,6 +79,15 @@ namespace Drumpad_Application.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Pads - Clicks or Pree the right Key on Keyboard to play the sound!{0}Play - Play back a recorded sound file!{0}Pause/Resume - Pause or Resume your recording!{0}Record - Record sounds on a timer that can be played back!.
+        /// </summary>
+        internal static string Instructions {
+            get {
+                return ResourceManager.GetString("Instructions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream Kick1 {
