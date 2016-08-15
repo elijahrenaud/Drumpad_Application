@@ -15,6 +15,8 @@ namespace Drumpad_Application
         Timer ptimer = new Timer(100);
         Sounds music = new Sounds();
 
+
+        //Default
         public Player()
         {
             song = "";
@@ -24,12 +26,11 @@ namespace Drumpad_Application
         }
 
         public void play() {
-           
+            playercounter = 0;
+            counter = 0;
             stimer.Stop();
             ptimer.Elapsed += new ElapsedEventHandler(player_timer);
             ptimer.Start();
-            playercounter = 0;
-         
         }
 
         public void player_timer(object sender, EventArgs e)
@@ -48,12 +49,15 @@ namespace Drumpad_Application
                 ptimer.Stop();
         }
 
+
+        //With File
         public Player(string _song) {
             song = _song;
             counter = 0;
             emptycounter = 0;
             stimer.Elapsed += new ElapsedEventHandler(timer_tick);
         }
+
         public void start()
         {
             stimer.Start();
@@ -76,6 +80,7 @@ namespace Drumpad_Application
             counter = 0;
             emptycounter = 0;
         }
+
         public void timer_tick(object sender, EventArgs e)
         {
             if (emptycounter == counter)
@@ -91,8 +96,6 @@ namespace Drumpad_Application
                 ++emptycounter;
                 ++emptycounter;
             }
-
-
         }
 
     }

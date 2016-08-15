@@ -51,47 +51,51 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(27, 121);
+            this.button1.BackColor = System.Drawing.Color.YellowGreen;
+            this.button1.Location = new System.Drawing.Point(27, 149);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(142, 134);
             this.button1.TabIndex = 0;
             this.button1.Text = "Pad1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(192, 121);
+            this.button2.BackColor = System.Drawing.Color.Aqua;
+            this.button2.Location = new System.Drawing.Point(192, 149);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(142, 134);
             this.button2.TabIndex = 1;
             this.button2.Text = "Pad2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(27, 278);
+            this.button3.BackColor = System.Drawing.Color.Crimson;
+            this.button3.Location = new System.Drawing.Point(27, 306);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(142, 134);
             this.button3.TabIndex = 2;
             this.button3.Text = "Pad3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(192, 278);
+            this.button4.BackColor = System.Drawing.Color.Tomato;
+            this.button4.Location = new System.Drawing.Point(192, 306);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(142, 134);
             this.button4.TabIndex = 3;
             this.button4.Text = "Pad4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnPlay
             // 
-            this.btnPlay.Location = new System.Drawing.Point(359, 130);
+            this.btnPlay.Location = new System.Drawing.Point(359, 158);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(104, 45);
             this.btnPlay.TabIndex = 4;
@@ -101,7 +105,7 @@
             // 
             // btnPause
             // 
-            this.btnPause.Location = new System.Drawing.Point(359, 200);
+            this.btnPause.Location = new System.Drawing.Point(359, 228);
             this.btnPause.Name = "btnPause";
             this.btnPause.Size = new System.Drawing.Size(104, 45);
             this.btnPause.TabIndex = 5;
@@ -111,7 +115,7 @@
             // 
             // btnStop
             // 
-            this.btnStop.Location = new System.Drawing.Point(359, 288);
+            this.btnStop.Location = new System.Drawing.Point(359, 316);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(104, 45);
             this.btnStop.TabIndex = 6;
@@ -121,7 +125,7 @@
             // 
             // btnRecord
             // 
-            this.btnRecord.Location = new System.Drawing.Point(359, 358);
+            this.btnRecord.Location = new System.Drawing.Point(359, 386);
             this.btnRecord.Name = "btnRecord";
             this.btnRecord.Size = new System.Drawing.Size(104, 45);
             this.btnRecord.TabIndex = 7;
@@ -131,7 +135,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(27, 23);
+            this.textBox1.Location = new System.Drawing.Point(27, 52);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(436, 74);
@@ -139,6 +143,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.helpToolStripMenuItem,
@@ -162,21 +167,21 @@
             // importToolStripMenuItem
             // 
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.importToolStripMenuItem.Text = "Import";
             this.importToolStripMenuItem.Click += new System.EventHandler(this.importToolStripMenuItem_Click);
             // 
             // exportToolStripMenuItem
             // 
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.exportToolStripMenuItem.Text = "Export";
             this.exportToolStripMenuItem.Click += new System.EventHandler(this.exportToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -200,7 +205,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 434);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ClientSize = new System.Drawing.Size(493, 463);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnRecord);
             this.Controls.Add(this.btnStop);
@@ -218,6 +224,7 @@
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.form_KeyDown);
 
         }
 

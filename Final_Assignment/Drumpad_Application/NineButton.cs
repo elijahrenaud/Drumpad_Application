@@ -3,51 +3,28 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Drumpad_Application
 {
-    public partial class FourButton : Form
+    public partial class NineButton : Form
     {
         //Objects
         Sounds samples;
         Player p;
 
-        public FourButton()
+        public NineButton()
         {
             InitializeComponent();
             samples = new Sounds();
             p = new Player();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            p.push(1);
-            samples.play(1);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            p.push(2);
-            samples.play(2);
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            p.push(3);
-            samples.play(3);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            p.push(4);
-            samples.play(4);
-        }
-
+        //Functions Buttons
         private void btnPlay_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
@@ -72,13 +49,71 @@ namespace Drumpad_Application
             p.start();
         }
 
+
+        //Sample Buttons
+        private void button1_Click(object sender, EventArgs e)
+        {
+            p.push(1);
+            samples.play(1);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            p.push(2);
+            samples.play(1);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            p.push(3);
+            samples.play(1);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            p.push(4);
+            samples.play(1);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //p.push(1);
+            samples.play(1);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //p.push(1);
+            samples.play(1);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            //p.push(1);
+            samples.play(1);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            //p.push(1);
+            samples.play(1);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            //p.push(1);
+            samples.play(1);
+        }
+
         private void importToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ofdImport.Title = "Open Song File";
             ofdImport.Filter = "txt song files|*.txt";
-            if (ofdImport.ShowDialog() == DialogResult.OK) {
+            if (ofdImport.ShowDialog() == DialogResult.OK)
+            {
                 string data = File.ReadAllText(ofdImport.FileName);
-                foreach (char c in data) {
+                foreach (char c in data)
+                {
                     if (!(c.Equals('-') || char.IsDigit(c)))
                     {
                         MessageBox.Show("This file is not a song. Please try other file");
@@ -87,7 +122,7 @@ namespace Drumpad_Application
                     else {
                         p = new Player(data);
                     }
-                } 
+                }
             }
         }
 
@@ -95,7 +130,8 @@ namespace Drumpad_Application
         {
             sfdexport.Title = "Save as text file";
             sfdexport.Filter = "txt song files|*.txt";
-            if (sfdexport.ShowDialog() == DialogResult.OK) {
+            if (sfdexport.ShowDialog() == DialogResult.OK)
+            {
                 File.WriteAllText(sfdexport.FileName, p.song);
             }
         }
@@ -103,30 +139,6 @@ namespace Drumpad_Application
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void form_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
-        {
-            switch (e.KeyCode)
-            {
-                case Keys.Q:
-                    e.Handled = true;
-                    button1.PerformClick();
-                    break;
-                case Keys.W:
-                    e.Handled = true;
-                    button2.PerformClick();
-                    break;
-                case Keys.A:
-                    e.Handled = true;
-                    button3.PerformClick();
-                    break;
-                case Keys.S:
-                    e.Handled = true;
-                    button4.PerformClick();
-                    break;
-
-            }
         }
     }
 }

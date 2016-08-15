@@ -52,6 +52,12 @@
     <Compile Include="FourButton.Designer.cs">
       <DependentUpon>FourButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="NineButton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NineButton.Designer.cs">
+      <DependentUpon>NineButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="Player.cs" />
     <Compile Include="Test timings.cs">
       <SubType>Form</SubType>
@@ -64,6 +70,9 @@
     <Compile Include="Sounds.cs" />
     <EmbeddedResource Include="FourButton.resx">
       <DependentUpon>FourButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NineButton.resx">
+      <DependentUpon>NineButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -113,6 +122,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="_Samples\HiHat1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="_Images\red_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="_Images\red_button_hit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
