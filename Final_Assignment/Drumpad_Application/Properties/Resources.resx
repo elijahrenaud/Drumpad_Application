@@ -148,4 +148,7 @@
   <data name="Slap1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\_Samples\Slap1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Instructions" xml:space="preserve">
+    <value>Pads - Clicks or Pree the right Key on Keyboard to play the sound!{0}Play - Play back a recorded sound file!{0}Pause/Resume - Pause or Resume your recording!{0}Record - Record sounds on a timer that can be played back!</value>
+  </data>
 </root>
