@@ -63,6 +63,15 @@ namespace Drumpad_Application.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream DoorBell1 {
+            get {
+                return ResourceManager.GetStream("DoorBell1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream HiHat1 {
             get {
                 return ResourceManager.GetStream("HiHat1", resourceCulture);
@@ -81,9 +90,27 @@ namespace Drumpad_Application.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Laser2 {
+            get {
+                return ResourceManager.GetStream("Laser2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream Piano1 {
             get {
                 return ResourceManager.GetStream("Piano1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Pop1 {
+            get {
+                return ResourceManager.GetStream("Pop1", resourceCulture);
             }
         }
         
@@ -94,6 +121,24 @@ namespace Drumpad_Application.Properties {
             get {
                 object obj = ResourceManager.GetObject("red_button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Robot1 {
+            get {
+                return ResourceManager.GetStream("Robot1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Slap1 {
+            get {
+                return ResourceManager.GetStream("Slap1", resourceCulture);
             }
         }
         

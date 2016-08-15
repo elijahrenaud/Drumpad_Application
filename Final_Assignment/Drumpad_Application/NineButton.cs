@@ -85,49 +85,49 @@ namespace Drumpad_Application
         private void button2_Click(object sender, EventArgs e)
         {
             p.push(2);
-            samples.play(1);
+            samples.play(2);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             p.push(3);
-            samples.play(1);
+            samples.play(3);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             p.push(4);
-            samples.play(1);
+            samples.play(4);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //p.push(1);
-            samples.play(1);
+            p.push(5);
+            samples.play(5);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            //p.push(1);
-            samples.play(1);
+            p.push(6);
+            samples.play(6);
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            //p.push(1);
-            samples.play(1);
+            p.push(7);
+            samples.play(7);
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            //p.push(1);
-            samples.play(1);
+            p.push(8);
+            samples.play(8);
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            //p.push(1);
-            samples.play(1);
+            p.push(9);
+            samples.play(9);
         }
 
         private void importToolStripMenuItem_Click(object sender, EventArgs e)

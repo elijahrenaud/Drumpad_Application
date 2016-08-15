@@ -39,6 +39,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.padToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,7 +52,6 @@
             this.button7 = new System.Windows.Forms.Button();
             this.ofdImport = new System.Windows.Forms.OpenFileDialog();
             this.sfdexport = new System.Windows.Forms.SaveFileDialog();
-            this.padToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,6 +106,7 @@
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.Cyan;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Location = new System.Drawing.Point(193, 316);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(142, 134);
@@ -117,6 +118,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Orange;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Location = new System.Drawing.Point(28, 316);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(142, 134);
@@ -128,6 +130,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Chartreuse;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Location = new System.Drawing.Point(193, 159);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(142, 134);
@@ -139,6 +142,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Violet;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Location = new System.Drawing.Point(28, 159);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(142, 134);
@@ -170,6 +174,13 @@
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
+            // 
+            // padToolStripMenuItem
+            // 
+            this.padToolStripMenuItem.Name = "padToolStripMenuItem";
+            this.padToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.padToolStripMenuItem.Text = "4-Pad";
+            this.padToolStripMenuItem.Click += new System.EventHandler(this.padToolStripMenuItem_Click);
             // 
             // importToolStripMenuItem
             // 
@@ -207,6 +218,7 @@
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.Red;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button6.Location = new System.Drawing.Point(360, 316);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(142, 134);
@@ -218,6 +230,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Snow;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Location = new System.Drawing.Point(360, 159);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(142, 134);
@@ -229,6 +242,7 @@
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button9.Location = new System.Drawing.Point(360, 468);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(142, 134);
@@ -240,6 +254,7 @@
             // button8
             // 
             this.button8.BackColor = System.Drawing.Color.MediumPurple;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button8.Location = new System.Drawing.Point(193, 468);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(142, 134);
@@ -251,6 +266,7 @@
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.Yellow;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button7.Location = new System.Drawing.Point(28, 468);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(142, 134);
@@ -262,13 +278,6 @@
             // ofdImport
             // 
             this.ofdImport.FileName = "openFileDialog1";
-            // 
-            // padToolStripMenuItem
-            // 
-            this.padToolStripMenuItem.Name = "padToolStripMenuItem";
-            this.padToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.padToolStripMenuItem.Text = "4-Pad";
-            this.padToolStripMenuItem.Click += new System.EventHandler(this.padToolStripMenuItem_Click);
             // 
             // NineButton
             // 

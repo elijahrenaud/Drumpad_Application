@@ -15,6 +15,11 @@ namespace Drumpad_Application
         SoundPlayer sound2;
         SoundPlayer sound3;
         SoundPlayer sound4;
+        SoundPlayer sound5;
+        SoundPlayer sound6;
+        SoundPlayer sound7;
+        SoundPlayer sound8;
+        SoundPlayer sound9;
 
         //Constructor
         public Sounds()
@@ -35,6 +40,27 @@ namespace Drumpad_Application
             Stream sFile4 = Properties.Resources.Piano1;
             sound4 = new SoundPlayer(sFile4);
             sound4.Load();
+
+            Stream sFile5 = Properties.Resources.Laser2;
+            sound5 = new SoundPlayer(sFile5);
+            sound5.Load();
+
+            Stream sFile6 = Properties.Resources.Pop1;
+            sound6 = new SoundPlayer(sFile6);
+            sound6.Load();
+
+            Stream sFile7 = Properties.Resources.DoorBell1;
+            sound7 = new SoundPlayer(sFile7);
+            sound7.Load();
+
+            Stream sFile8 = Properties.Resources.Slap1;
+            sound8 = new SoundPlayer(sFile8);
+            sound8.Load();
+
+            Stream sFile9 = Properties.Resources.Robot1;
+            sound9 = new SoundPlayer(sFile9);
+            sound9.Load();
+
         }
 
         public void play(int sample)
@@ -52,6 +78,21 @@ namespace Drumpad_Application
                     break;
                 case 4:
                     sound4.Play();
+                    break;
+                case 5:
+                    sound5.Play();
+                    break;
+                case 6:
+                    sound6.Play();
+                    break;
+                case 7:
+                    sound7.Play();
+                    break;
+                case 8:
+                    sound8.Play();
+                    break;
+                case 9:
+                    sound9.Play();
                     break;
             }
         }

@@ -39,6 +39,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.padToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,13 +47,13 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ofdImport = new System.Windows.Forms.OpenFileDialog();
             this.sfdexport = new System.Windows.Forms.SaveFileDialog();
-            this.padToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.YellowGreen;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Location = new System.Drawing.Point(27, 149);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(142, 134);
@@ -64,6 +65,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Aqua;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Location = new System.Drawing.Point(192, 149);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(142, 134);
@@ -75,6 +77,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Crimson;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Location = new System.Drawing.Point(27, 306);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(142, 134);
@@ -86,6 +89,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Tomato;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Location = new System.Drawing.Point(192, 306);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(142, 134);
@@ -168,6 +172,13 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
+            // padToolStripMenuItem
+            // 
+            this.padToolStripMenuItem.Name = "padToolStripMenuItem";
+            this.padToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.padToolStripMenuItem.Text = "9-Pad";
+            this.padToolStripMenuItem.Click += new System.EventHandler(this.padToolStripMenuItem_Click);
+            // 
             // importToolStripMenuItem
             // 
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
@@ -204,13 +215,6 @@
             // ofdImport
             // 
             this.ofdImport.FileName = "openFileDialog1";
-            // 
-            // padToolStripMenuItem
-            // 
-            this.padToolStripMenuItem.Name = "padToolStripMenuItem";
-            this.padToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.padToolStripMenuItem.Text = "9-Pad";
-            this.padToolStripMenuItem.Click += new System.EventHandler(this.padToolStripMenuItem_Click);
             // 
             // FourButton
             // 

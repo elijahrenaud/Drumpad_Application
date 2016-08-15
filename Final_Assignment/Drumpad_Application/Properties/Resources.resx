@@ -133,4 +133,19 @@
   <data name="Snare1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\_Samples\Snare1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="DoorBell1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\_Samples\DoorBell1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Laser2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\_Samples\Laser2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Pop1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\_Samples\Pop1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Robot1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\_Samples\Robot1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Slap1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\_Samples\Slap1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
