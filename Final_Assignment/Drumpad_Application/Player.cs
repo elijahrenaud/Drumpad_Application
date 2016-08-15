@@ -10,12 +10,19 @@ namespace Drumpad_Application
     class Player
     {
         Timer stimer = new Timer(100);
-        public List<string> song;
+        public string song;
         int counter, emptycounter;
 
         public Player()
         {
-            song = new List<string>();
+            song = "";
+            counter = 0;
+            emptycounter = 0;
+            stimer.Elapsed += new ElapsedEventHandler(timer_tick);
+        }
+
+        public Player(string _song) {
+            song = _song;
             counter = 0;
             emptycounter = 0;
             stimer.Elapsed += new ElapsedEventHandler(timer_tick);
@@ -28,7 +35,7 @@ namespace Drumpad_Application
 
         public void push(int s)
         {
-            song.Add(s.ToString());
+            song+=s.ToString();
             ++counter;          
         }
         public void pause()
@@ -46,7 +53,7 @@ namespace Drumpad_Application
         {
             if (emptycounter == counter)
             {
-                song.Add("-");
+                song+="-";
                 ++counter;
                 ++emptycounter;
                
