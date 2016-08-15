@@ -21,10 +21,12 @@ namespace Drumpad_Application
         SoundPlayer sound7;
         SoundPlayer sound8;
         SoundPlayer sound9;
+        //sound values above
 
         //Constructor
         public Sounds()
         {
+            //open files and get the players ready
             try {
                 //Initialize Sounds
                 Stream sFile1 = Properties.Resources.Kick1;
@@ -77,6 +79,7 @@ namespace Drumpad_Application
 
         public void play(int sample)
         {
+            //Play the sound from one of the players on button press
             switch (sample)
             {
                 case 1:
