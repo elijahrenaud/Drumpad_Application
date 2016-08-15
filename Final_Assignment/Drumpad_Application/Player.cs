@@ -9,11 +9,11 @@ namespace Drumpad_Application
 {
     class Player
     {
-        Timer stimer = new Timer(50);
-        public string song;
-        int counter, emptycounter, playercounter;
-        Timer ptimer = new Timer(50);
-        Sounds music = new Sounds();
+        Timer stimer = new Timer(50); // read timer
+        public string song; // the holding string for the data of the song 
+        int counter, emptycounter, playercounter; // 3 counters to handle clicks and navigate the song
+        Timer ptimer = new Timer(50);// play sound timer
+        Sounds music = new Sounds();//our sound object
 
 
 
@@ -23,17 +23,24 @@ namespace Drumpad_Application
             song = "";
             counter = 0;
             emptycounter = 0;
+            //bind timer events
             stimer.Elapsed += new ElapsedEventHandler(timer_tick);
             ptimer.Elapsed += new ElapsedEventHandler(player_timer);
         }
-
+        /// <summary>
+        /// play the song
+        /// </summary>
         public void play() {
             playercounter = 0;
             counter = 0;
             stimer.Stop();            
             ptimer.Start();
         }
-
+        /// <summary>
+        /// trigger the event of timer elapsed while playing the song
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void player_timer(object sender, EventArgs e)
         {
             if (playercounter < song.Length)
@@ -51,15 +58,21 @@ namespace Drumpad_Application
         }
 
 
-        //With File
+        /// <summary>
+        /// Constructor for the existing song
+        /// </summary>
+        /// <param name="_song">song string will go here</param>
         public Player(string _song) {
             song = _song;
             counter = 0;
             emptycounter = 0;
+            //bind timer events
             stimer.Elapsed += new ElapsedEventHandler(timer_tick);
             ptimer.Elapsed += new ElapsedEventHandler(player_timer);
         }
-
+        /// <summary>
+        /// start the timer -- record the song
+        /// </summary>
         public void start()
         {
             song = "";
@@ -67,11 +80,18 @@ namespace Drumpad_Application
 
         }
 
+        /// <summary>
+        /// when the button is pushed it will write the char in the song string
+        /// </summary>
+        /// <param name="s">button number</param>
         public void push(int s)
         {
             song += s.ToString();
             ++counter;
         }
+        /// <summary>
+        /// pause/continue button for the timer pause
+        /// </summary>
         public void pause()
         {
             if (stimer.Enabled)
@@ -80,6 +100,9 @@ namespace Drumpad_Application
                 stimer.Start();
         }
 
+        /// <summary>
+        /// stop writing the song, final point
+        /// </summary>
         public void stop()
         {
             stimer.Stop();
@@ -87,6 +110,11 @@ namespace Drumpad_Application
             emptycounter = 0;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void timer_tick(object sender, EventArgs e)
         {
             if (emptycounter == counter)
@@ -103,7 +131,7 @@ namespace Drumpad_Application
                 ++emptycounter;
             }
         }
-
+        
     }
 
     }
