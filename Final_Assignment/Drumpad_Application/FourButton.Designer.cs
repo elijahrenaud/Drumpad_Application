@@ -142,6 +142,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(27, 52);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -232,6 +233,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
+            this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FourButton";
             this.Text = "Drumpad 4";

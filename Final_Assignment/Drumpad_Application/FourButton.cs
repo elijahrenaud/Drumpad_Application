@@ -25,6 +25,7 @@ namespace Drumpad_Application
             p = new Player();
             utimer.Interval = 50;
             utimer.Tick += new EventHandler(upd);
+            this.Focus();
         }
 
         private void upd(object sender, EventArgs e) {
@@ -129,11 +130,13 @@ namespace Drumpad_Application
             Application.Exit();
         }
 
-        private void form_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        private void form_KeyDown(object sender, KeyEventArgs e)
         {
+          
             switch (e.KeyCode)
             {
                 case Keys.Q:
+                   
                     e.Handled = true;
                     button1.PerformClick();
                     break;
