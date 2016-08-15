@@ -63,9 +63,27 @@ namespace Drumpad_Application.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream HiHat1 {
+            get {
+                return ResourceManager.GetStream("HiHat1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream Kick1 {
             get {
                 return ResourceManager.GetStream("Kick1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Piano1 {
+            get {
+                return ResourceManager.GetStream("Piano1", resourceCulture);
             }
         }
         

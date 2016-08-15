@@ -13,6 +13,8 @@ namespace Drumpad_Application
         //Objects
         SoundPlayer sound1;
         SoundPlayer sound2;
+        SoundPlayer sound3;
+        SoundPlayer sound4;
 
         //Constructor
         public Sounds()
@@ -25,6 +27,14 @@ namespace Drumpad_Application
             Stream sFile2 = Properties.Resources.Snare1;
             sound2 = new SoundPlayer(sFile2);
             sound2.Load();
+
+            Stream sFile3 = Properties.Resources.HiHat1;
+            sound3 = new SoundPlayer(sFile3);
+            sound3.Load();
+
+            Stream sFile4 = Properties.Resources.Piano1;
+            sound4 = new SoundPlayer(sFile4);
+            sound4.Load();
         }
 
         public void play(int sample)
@@ -36,6 +46,12 @@ namespace Drumpad_Application
                     break;
                 case 2:
                     sound2.Play();
+                    break;
+                case 3:
+                    sound3.Play();
+                    break;
+                case 4:
+                    sound4.Play();
                     break;
             }
         }
