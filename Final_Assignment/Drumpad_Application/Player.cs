@@ -9,11 +9,12 @@ namespace Drumpad_Application
 {
     class Player
     {
-        Timer stimer = new Timer(100);
+        Timer stimer = new Timer(50);
         public string song;
         int counter, emptycounter, playercounter;
-        Timer ptimer = new Timer(100);
+        Timer ptimer = new Timer(50);
         Sounds music = new Sounds();
+
 
 
         //Default
@@ -23,13 +24,13 @@ namespace Drumpad_Application
             counter = 0;
             emptycounter = 0;
             stimer.Elapsed += new ElapsedEventHandler(timer_tick);
+            ptimer.Elapsed += new ElapsedEventHandler(player_timer);
         }
 
         public void play() {
             playercounter = 0;
             counter = 0;
-            stimer.Stop();
-            ptimer.Elapsed += new ElapsedEventHandler(player_timer);
+            stimer.Stop();            
             ptimer.Start();
         }
 
@@ -56,10 +57,12 @@ namespace Drumpad_Application
             counter = 0;
             emptycounter = 0;
             stimer.Elapsed += new ElapsedEventHandler(timer_tick);
+            ptimer.Elapsed += new ElapsedEventHandler(player_timer);
         }
 
         public void start()
         {
+            song = "";
             stimer.Start();
 
         }
@@ -71,7 +74,10 @@ namespace Drumpad_Application
         }
         public void pause()
         {
-            stimer.Stop();
+            if (stimer.Enabled)
+                stimer.Stop();
+            else
+                stimer.Start();
         }
 
         public void stop()

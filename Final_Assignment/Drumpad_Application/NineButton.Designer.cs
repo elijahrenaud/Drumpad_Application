@@ -51,6 +51,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.ofdImport = new System.Windows.Forms.OpenFileDialog();
             this.sfdexport = new System.Windows.Forms.SaveFileDialog();
+            this.padToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,7 +89,7 @@
             this.btnPause.Name = "btnPause";
             this.btnPause.Size = new System.Drawing.Size(104, 45);
             this.btnPause.TabIndex = 15;
-            this.btnPause.Text = "Pause";
+            this.btnPause.Text = "Pause/Resume";
             this.btnPause.UseVisualStyleBackColor = true;
             this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
             // 
@@ -162,6 +163,7 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.padToolStripMenuItem,
             this.importToolStripMenuItem,
             this.exportToolStripMenuItem,
             this.exitToolStripMenuItem});
@@ -261,6 +263,13 @@
             // 
             this.ofdImport.FileName = "openFileDialog1";
             // 
+            // padToolStripMenuItem
+            // 
+            this.padToolStripMenuItem.Name = "padToolStripMenuItem";
+            this.padToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.padToolStripMenuItem.Text = "4-Pad";
+            this.padToolStripMenuItem.Click += new System.EventHandler(this.padToolStripMenuItem_Click);
+            // 
             // NineButton
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,5 +325,6 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.OpenFileDialog ofdImport;
         private System.Windows.Forms.SaveFileDialog sfdexport;
+        private System.Windows.Forms.ToolStripMenuItem padToolStripMenuItem;
     }
 }

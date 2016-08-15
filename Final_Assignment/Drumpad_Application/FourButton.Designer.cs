@@ -46,6 +46,7 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ofdImport = new System.Windows.Forms.OpenFileDialog();
             this.sfdexport = new System.Windows.Forms.SaveFileDialog();
+            this.padToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,16 +106,18 @@
             // 
             // btnPause
             // 
+            this.btnPause.Enabled = false;
             this.btnPause.Location = new System.Drawing.Point(359, 228);
             this.btnPause.Name = "btnPause";
             this.btnPause.Size = new System.Drawing.Size(104, 45);
             this.btnPause.TabIndex = 5;
-            this.btnPause.Text = "Pause";
+            this.btnPause.Text = "Pause/Resume";
             this.btnPause.UseVisualStyleBackColor = true;
             this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
             // 
             // btnStop
             // 
+            this.btnStop.Enabled = false;
             this.btnStop.Location = new System.Drawing.Point(359, 316);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(104, 45);
@@ -157,6 +160,7 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.padToolStripMenuItem,
             this.importToolStripMenuItem,
             this.exportToolStripMenuItem,
             this.exitToolStripMenuItem});
@@ -201,6 +205,13 @@
             // 
             this.ofdImport.FileName = "openFileDialog1";
             // 
+            // padToolStripMenuItem
+            // 
+            this.padToolStripMenuItem.Name = "padToolStripMenuItem";
+            this.padToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.padToolStripMenuItem.Text = "9-Pad";
+            this.padToolStripMenuItem.Click += new System.EventHandler(this.padToolStripMenuItem_Click);
+            // 
             // FourButton
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -220,11 +231,11 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FourButton";
             this.Text = "Drumpad 4";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.form_KeyDown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.form_KeyDown);
 
         }
 
@@ -248,6 +259,7 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog ofdImport;
         private System.Windows.Forms.SaveFileDialog sfdexport;
+        private System.Windows.Forms.ToolStripMenuItem padToolStripMenuItem;
     }
 }
 

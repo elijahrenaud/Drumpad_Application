@@ -16,12 +16,20 @@ namespace Drumpad_Application
         //Objects
         Sounds samples;
         Player p;
+        Timer utimer = new Timer();
 
         public NineButton()
         {
             InitializeComponent();
             samples = new Sounds();
             p = new Player();
+            utimer.Interval = 50;
+            utimer.Tick += new EventHandler(upd);
+        }
+        private void upd(object sender, EventArgs e)
+        {
+            textBox1.Text = p.song;
+            textBox1.Update();
         }
 
         //Functions Buttons
@@ -31,7 +39,14 @@ namespace Drumpad_Application
             foreach (char s in p.song)
                 textBox1.Text += s;
             textBox1.Refresh();
-            p.play();
+            if (String.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("The song is empty");
+            }
+            else
+            {
+                p.play();
+            }
         }
 
         private void btnPause_Click(object sender, EventArgs e)
@@ -41,12 +56,22 @@ namespace Drumpad_Application
 
         private void btnStop_Click(object sender, EventArgs e)
         {
+            btnPause.Enabled = false;
+            btnPlay.Enabled = true;
+            btnRecord.Enabled = true;
+            btnStop.Enabled = false;
             p.stop();
+            utimer.Stop();
         }
 
         private void btnRecord_Click(object sender, EventArgs e)
         {
+            btnPause.Enabled = true;
+            btnPlay.Enabled = false;
+            btnRecord.Enabled = false;
+            btnStop.Enabled = true;
             p.start();
+            utimer.Start();
         }
 
 
@@ -139,6 +164,14 @@ namespace Drumpad_Application
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void padToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FourButton swap = new FourButton();
+            this.Hide();
+            swap.Focus();
+            swap.Show();
         }
     }
 }
