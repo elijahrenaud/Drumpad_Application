@@ -59,12 +59,6 @@
       <DependentUpon>NineButton.cs</DependentUpon>
     </Compile>
     <Compile Include="Player.cs" />
-    <Compile Include="Test timings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Test timings.Designer.cs">
-      <DependentUpon>Test timings.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sounds.cs" />
@@ -84,9 +78,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Test timings.resx">
-      <DependentUpon>Test timings.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -14,27 +14,34 @@ namespace Drumpad_Application
     public partial class NineButton : Form
     {
         //Objects
-        Sounds samples;
-        Player p;
-        Timer utimer = new Timer();
+        Sounds samples; //sounds object
+        Player p; // main player
+        Timer utimer = new Timer(); // update timer
 
         public NineButton()
         {
             InitializeComponent();
+            //initialize objects and methods
             samples = new Sounds();
             p = new Player();
             utimer.Interval = 50;
             utimer.Tick += new EventHandler(upd);
         }
+        //update the textbox
         private void upd(object sender, EventArgs e)
         {
             textBox1.Text = p.song;
             textBox1.Update();
         }
 
-        //Functions Buttons
+       /// <summary>
+       /// write the pressed char into ther song
+       /// </summary>
+       /// <param name="sender"></param>
+       /// <param name="e"></param>
         private void btnPlay_Click(object sender, EventArgs e)
         {
+
             textBox1.Text = "";
             foreach (char s in p.song)
                 textBox1.Text += s;
@@ -129,25 +136,36 @@ namespace Drumpad_Application
             p.push(9);
             samples.play(9);
         }
-
+        /// <summary>
+        /// download the song from file into string
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void importToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ofdImport.Title = "Open Song File";
             ofdImport.Filter = "txt song files|*.txt";
-            if (ofdImport.ShowDialog() == DialogResult.OK)
+            try
             {
-                string data = File.ReadAllText(ofdImport.FileName);
-                foreach (char c in data)
+                if (ofdImport.ShowDialog() == DialogResult.OK)
                 {
-                    if (!(c.Equals('-') || char.IsDigit(c)))
+                    string data = File.ReadAllText(ofdImport.FileName);
+                    foreach (char c in data)
                     {
-                        MessageBox.Show("This file is not a song. Please try other file");
-                        return;
-                    }
-                    else {
-                        p = new Player(data);
+                        if (!(c.Equals('-') || char.IsDigit(c)))
+                        {
+                            MessageBox.Show("This file is not a song. Please try other file");
+                            return;
+                        }
+                        else
+                        {
+                            p = new Player(data);
+                        }
                     }
                 }
+            }
+            catch {
+                MessageBox.Show("Reading Error");
             }
         }
 
@@ -155,9 +173,16 @@ namespace Drumpad_Application
         {
             sfdexport.Title = "Save as text file";
             sfdexport.Filter = "txt song files|*.txt";
-            if (sfdexport.ShowDialog() == DialogResult.OK)
+            try
+            {
+                if (sfdexport.ShowDialog() == DialogResult.OK)
             {
                 File.WriteAllText(sfdexport.FileName, p.song);
+            }
+            }
+            catch
+            {
+                MessageBox.Show("Writing Error");
             }
         }
 
@@ -165,15 +190,18 @@ namespace Drumpad_Application
         {
             Application.Exit();
         }
+        //swap windows
 
         private void padToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FourButton swap = new FourButton();
-            this.Hide();
+            this.Close();
             swap.Focus();
             swap.Show();
         }
 
+
+        //menu strips
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string helpString = String.Format(Properties.Resources.Instructions, Environment.NewLine + Environment.NewLine);
@@ -198,6 +226,7 @@ namespace Drumpad_Application
             );
         }
 
+        //keyboard mapping
         private void form_KeyDown(object sender, KeyEventArgs e)
         {
 

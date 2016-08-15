@@ -60,9 +60,9 @@
             this.textBox1.Location = new System.Drawing.Point(112, 50);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(436, 74);
             this.textBox1.TabIndex = 18;
-            this.textBox1.ReadOnly = true;
             // 
             // btnRecord
             // 
@@ -76,6 +76,7 @@
             // 
             // btnStop
             // 
+            this.btnStop.Enabled = false;
             this.btnStop.Location = new System.Drawing.Point(532, 323);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(104, 45);
@@ -86,6 +87,7 @@
             // 
             // btnPause
             // 
+            this.btnPause.Enabled = false;
             this.btnPause.Location = new System.Drawing.Point(532, 235);
             this.btnPause.Name = "btnPause";
             this.btnPause.Size = new System.Drawing.Size(104, 45);
@@ -306,11 +308,11 @@
             this.KeyPreview = true;
             this.Name = "NineButton";
             this.Text = "NineButton";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.form_KeyDown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.form_KeyDown);
 
         }
 
