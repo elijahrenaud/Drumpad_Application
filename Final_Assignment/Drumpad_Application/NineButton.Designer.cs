@@ -62,6 +62,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(436, 74);
             this.textBox1.TabIndex = 18;
+            this.textBox1.ReadOnly = true;
             // 
             // btnRecord
             // 
@@ -302,12 +303,14 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
+            this.KeyPreview = true;
             this.Name = "NineButton";
             this.Text = "NineButton";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.form_KeyDown);
 
         }
 

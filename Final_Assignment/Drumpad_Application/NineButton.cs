@@ -197,5 +197,51 @@ namespace Drumpad_Application
                 MessageBoxIcon.Question
             );
         }
+
+        private void form_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            switch (e.KeyCode)
+            {
+                case Keys.Q:
+
+                    e.Handled = true;
+                    button1.PerformClick();
+                    break;
+                case Keys.W:
+                    e.Handled = true;
+                    button2.PerformClick();
+                    break;
+                case Keys.E:
+                    e.Handled = true;
+                    button3.PerformClick();
+                    break;
+                case Keys.A:
+                    e.Handled = true;
+                    button4.PerformClick();
+                    break;
+                case Keys.S:
+                    e.Handled = true;
+                    button5.PerformClick();
+                    break;
+                case Keys.D:
+                    e.Handled = true;
+                    button6.PerformClick();
+                    break;
+                case Keys.Z:
+                    e.Handled = true;
+                    button7.PerformClick();
+                    break;
+                case Keys.X:
+                    e.Handled = true;
+                    button8.PerformClick();
+                    break;
+                case Keys.C:
+                    e.Handled = true;
+                    button5.PerformClick();
+                    break;
+
+            }
+        }
     }
 }
