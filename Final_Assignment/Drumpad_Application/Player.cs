@@ -11,7 +11,9 @@ namespace Drumpad_Application
     {
         Timer stimer = new Timer(100);
         public string song;
-        int counter, emptycounter;
+        int counter, emptycounter, playercounter;
+        Timer ptimer = new Timer(100);
+        Sounds music = new Sounds();
 
         public Player()
         {
@@ -21,6 +23,31 @@ namespace Drumpad_Application
             stimer.Elapsed += new ElapsedEventHandler(timer_tick);
         }
 
+        public void play() {
+           
+            stimer.Stop();
+            ptimer.Elapsed += new ElapsedEventHandler(player_timer);
+            ptimer.Start();
+            playercounter = 0;
+         
+        }
+
+        public void player_timer(object sender, EventArgs e)
+        {
+            if (playercounter < song.Length)
+            {
+                char c = song[playercounter];
+                if (!c.Equals('-'))
+                {
+                    if (Char.IsDigit(c))
+                        music.play((int)Char.GetNumericValue(c));
+                }
+                playercounter++;
+            }
+            else
+                ptimer.Stop();
+        }
+
         public Player(string _song) {
             song = _song;
             counter = 0;
@@ -28,15 +55,15 @@ namespace Drumpad_Application
             stimer.Elapsed += new ElapsedEventHandler(timer_tick);
         }
         public void start()
-        {           
+        {
             stimer.Start();
 
         }
 
         public void push(int s)
         {
-            song+=s.ToString();
-            ++counter;          
+            song += s.ToString();
+            ++counter;
         }
         public void pause()
         {
@@ -45,7 +72,7 @@ namespace Drumpad_Application
 
         public void stop()
         {
-            stimer.Stop();          
+            stimer.Stop();
             counter = 0;
             emptycounter = 0;
         }
@@ -53,10 +80,10 @@ namespace Drumpad_Application
         {
             if (emptycounter == counter)
             {
-                song+="-";
+                song += "-";
                 ++counter;
                 ++emptycounter;
-               
+
             }
             else
             {
@@ -68,7 +95,7 @@ namespace Drumpad_Application
 
         }
 
-
+    }
 
     }
-}
+

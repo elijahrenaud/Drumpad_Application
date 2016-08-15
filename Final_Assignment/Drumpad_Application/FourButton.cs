@@ -50,8 +50,10 @@ namespace Drumpad_Application
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
+            textBox1.Text = "";
             foreach (char s in p.song)
                 textBox1.Text += s;
+            p.play();
         }
 
         private void btnPause_Click(object sender, EventArgs e)
