@@ -61,6 +61,15 @@ namespace Drumpad_Application.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to DrumPad Application{0}{0}Group Members:{0}     Denys Babych{0}     Elijah Renaud{0}     Manvi Vig.
+        /// </summary>
+        internal static string About {
+            get {
+                return ResourceManager.GetString("About", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream DoorBell1 {

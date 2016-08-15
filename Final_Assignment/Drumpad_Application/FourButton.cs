@@ -160,5 +160,29 @@ namespace Drumpad_Application
             swap.Focus();
             swap.Show();
         }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string helpString = String.Format(Properties.Resources.Instructions, Environment.NewLine + Environment.NewLine);
+
+            MessageBox.Show(
+                helpString,
+                "Help",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Question
+            );
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string aboutString = String.Format(Properties.Resources.About, Environment.NewLine);
+
+            MessageBox.Show(
+                aboutString,
+                "About",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+        }
     }
 }

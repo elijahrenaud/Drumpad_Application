@@ -180,7 +180,7 @@ namespace Drumpad_Application
 
             MessageBox.Show(
                 helpString,
-                "How To",
+                "Help",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Question
             );
@@ -188,7 +188,14 @@ namespace Drumpad_Application
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            string aboutString = String.Format(Properties.Resources.About, Environment.NewLine);
 
+            MessageBox.Show(
+                aboutString,
+                "About",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Question
+            );
         }
     }
 }

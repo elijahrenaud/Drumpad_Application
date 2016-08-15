@@ -151,4 +151,7 @@
   <data name="Instructions" xml:space="preserve">
     <value>Pads - Clicks or Pree the right Key on Keyboard to play the sound!{0}Play - Play back a recorded sound file!{0}Pause/Resume - Pause or Resume your recording!{0}Record - Record sounds on a timer that can be played back!</value>
   </data>
+  <data name="About" xml:space="preserve">
+    <value>DrumPad Application{0}{0}Group Members:{0}     Denys Babych{0}     Elijah Renaud{0}     Manvi Vig</value>
+  </data>
 </root>
