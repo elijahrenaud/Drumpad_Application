@@ -38,12 +38,14 @@ namespace Drumpad_Application
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //TODO Push and Play Sound
+            p.push(3);
+            samples.play(3);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //TODO Push and Play Sound
+            p.push(4);
+            samples.play(4);
         }
 
         private void btnPlay_Click(object sender, EventArgs e)
